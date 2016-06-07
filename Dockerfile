@@ -7,4 +7,7 @@ RUN apt-get update && apt-get install -y python python-dev libxml2-dev libxslt-d
 # Update python3
 RUN apt-get install -y python3 python3-dev python3-pip
 RUN pip3 install --upgrade setuptools
+# Install database third parties
+RUN apt-get install -y python-psycopg2 # postgres
+RUN apt-get install -y python-mysql.connector # mysql
 
